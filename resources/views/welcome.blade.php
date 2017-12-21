@@ -51,6 +51,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Orignal</th>
+                    <th scope="col">Id</th>
                     <th scope="col">Short</th>
 
                 </tr>
@@ -61,6 +62,7 @@
                     <th scope="row">{{ ++$key }}</th>
                     <td>{{$url->url}}</td>
                     <td><a href="view/{{$url->id}}">{{$url->id}}</a></td>
+                    <td><a href="view/{{$url->id}}">{{$url->short}}</a></td>
                 </tr>
                 @endforeach
             </tbody>

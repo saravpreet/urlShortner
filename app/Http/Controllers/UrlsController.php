@@ -43,6 +43,8 @@ class UrlsController extends Controller
         ]);
 
         try {
+            $uniqueHash=substr(uniqid(),0,5);
+            $validData['short']=$uniqueHash;
             urls::create($validData);
         } catch (\Illuminate\Database\QueryException $e){
             dd($e);
