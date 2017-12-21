@@ -43,7 +43,7 @@ class UrlsController extends Controller
         ]);
 
         try {
-            $uniqueHash=substr(uniqid(),0,5);
+            $uniqueHash=substr(md5(microtime()),0,5);
             $validData['short']=$uniqueHash;
             urls::create($validData);
         } catch (\Illuminate\Database\QueryException $e){
